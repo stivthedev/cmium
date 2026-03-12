@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CUMIUM (CM)</title>
+
+    <style>
+        :root {
+            --bg: #060606;
+            --text: #f2f2f2;
+            --muted: #888;
+            --accent: #79f0ff;
+            --box: #101010;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* CHEMICAL GRID BACKGROUND */
+
+        body::before {
+
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(121, 240, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(121, 240, 255, 0.05) 1px, transparent 1px);
+
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: -1;
+
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* hero */
+
+        .hero {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .logo img {
+            width: 180px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        h1 {
+            font-size: 56px;
+            letter-spacing: 6px;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin-top: 10px;
+        }
+
+        /* periodic tile */
+
+        .tile {
+            margin: 40px auto;
+            width: 160px;
+            border: 2px solid var(--accent);
+            padding: 15px;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        .tile .symbol {
+            font-size: 36px;
+        }
+
+        .tile .name {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        /* sections */
+
+        .section {
+            margin-top: 70px;
+        }
+
+        .box {
+            background: var(--box);
+            border: 1px solid #222;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .box h2 {
+            margin-bottom: 15px;
+        }
+
+        /* molecule */
+
+        .molecule {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+        }
+
+        .atom {
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent);
+            animation: pulse 2s infinite;
+        }
+
+        .atom:nth-child(2) {
+            animation-delay: .4s
+        }
+
+        .atom:nth-child(3) {
+            animation-delay: .8s
+        }
+
+        @keyframes pulse {
+
+            0% {
+                transform: scale(1)
+            }
+
+            50% {
+                transform: scale(1.6)
+            }
+
+            100% {
+                transform: scale(1)
+            }
+
+        }
+
+        /* footer */
+
+        .footer {
+            text-align: center;
+            margin-top: 80px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* CHEMICAL GRID BACKGROUND */
+
+        body::before {
+
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(121, 240, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(121, 240, 255, 0.05) 1px, transparent 1px);
+
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: -1;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section class="hero">
+
+            <div class="logo">
+                <img src="logo.jpg" alt="Cumium logo">
+            </div>
+
+            <h1>$CUMIUM</h1>
+
+            <p class="subtitle">Synthetic Meme Compound</p>
+            <p class="subtitle">CA: </p>
+
+
+
+        </section>
+
+        <section class="section">
+
+            <div class="box">
+
+                <h2>Discovery</h2>
+
+                <p>
+                    Cumium was first detected during an extended crypto market crash.
+                </p>
+
+                <p>
+                    Charts were flat.
+                    Liquidity disappeared.
+                    Traders were bored out of their minds.
+                </p>
+
+                <p>
+                    Some stopped trading.
+                    Some became slackers.
+                    Some started posting nonsense.
+                </p>
+
+                <p>
+                    That's when researchers noticed the formation of a new compound:
+                    <strong>Cumium (CM).</strong>
+                </p>
+
+            </div>
+
+        </section>
+        <section class="section">
+
+            <div class="box">
+
+                <h2>Laboratory Status Monitor</h2>
+
+                <p id="labStatus" style="font-family:monospace;color:#79f0ff;">
+                    Initializing Cumium detection systems...
+                </p>
+
+            </div>
+
+        </section>
+        <section class="section">
+
+            <div class="box">
+
+                <h2>Chemical Properties</h2>
+
+                <p>
+                    Symbol: CM<br>
+                    Classification: Meme Compound<br>
+                    Stability: Questionable<br>
+                    Reactivity: Extremely Viral
+                </p>
+
+                <p>
+                    Cumium appears most frequently in environments with:
+                </p>
+
+                <p>
+                    • prolonged boredom<br>
+                    • collapsing markets<br>
+                    • excessive internet exposure<br>
+                    • minimal productivity
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <div class="box">
+
+                <h2>Molecular Structure</h2>
+
+                <p>
+                    Cumium molecules bond rapidly between bored traders.
+                    Once enough particles connect, the compound begins spreading
+                    through social platforms at high velocity.
+                </p>
+
+                <div class="molecule">
+                    <div class="atom"></div>
+                    <div class="atom"></div>
+                    <div class="atom"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <div class="box">
+
+                <h2>Institute Warning</h2>
+
+                <p>
+                    Exposure to Cumium may cause:
+                </p>
+
+                <p>
+                    • severe boredom<br>
+                    • chronic chart watching<br>
+                    • loss of productivity<br>
+                    • spontaneous meme creation
+                </p>
+
+                <p>
+                    Containment is currently impossible.
+                </p>
+
+            </div>
+
+        </section>
+
+        <div class="footer">
+
+            © Cumium Research Institute
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    const statuses = [
+
+        "Cumium concentration rising",
+        "Productivity levels falling",
+        "Degeneracy detected",
+        "Bored trader activity increasing",
+        "Meme reaction unstable",
+        "Containment failure",
+        "Internet exposure critical",
+        "Sideways market conditions detected"
+
+    ];
+
+    function updateLabStatus() {
+
+        const status = statuses[Math.floor(Math.random() * statuses.length)];
+
+        document.getElementById("labStatus").innerText = status;
+
+    }
+
+    setInterval(updateLabStatus, 2500);
+
+    updateLabStatus();
+
+</script>
